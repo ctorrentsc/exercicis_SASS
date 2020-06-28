@@ -30,7 +30,6 @@ body {
            & .strip__content {
             @include strips_look($first-color);
             animation-name: strips-move1;
-            animation-duration: 1s;
             animation-delay: 0.1s;
 
                 & .strip__title {
@@ -57,7 +56,6 @@ body {
            & .strip__content {
             @include strips_look($second-color);
             animation-name: strips-move2;
-            animation-duration: 1s;
             animation-delay: 0.2s;
 
                 & .strip__title {
@@ -82,7 +80,6 @@ body {
            & .strip__content {
             @include strips_look($third-color);
             animation-name: strips-move3;
-            animation-duration: 1s;
             animation-delay: 0.3s;
 
                 & .strip__title {
@@ -107,7 +104,6 @@ body {
            & .strip__content {
             @include strips_look($fourth-color);
             animation-name: strips-move4;
-            animation-duration: 1s;
             animation-delay: 0.4s;
 
                 & .strip__title {
@@ -131,7 +127,6 @@ body {
 
            & .strip__content {
             @include strips_look($fifth-color);
-            animation-duration: 1s;
             animation-name: strips-move5;
             animation-delay: 0.5s;
 

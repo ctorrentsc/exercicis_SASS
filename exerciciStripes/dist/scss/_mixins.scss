@@ -1,5 +1,5 @@
 
-@mixin strips_look($color) {
+@mixin strips_look($color) {  // Aparença de cada strip
         display: flex;
         width: 100%;
         height: 100%;
@@ -14,7 +14,7 @@
         animation-fill-mode: both;
 }
 
-@mixin strips_effect {
+@mixin strips_effect {  // Efecte de la barra diagonal translúcida damunt de cada strip
     content: "";
     position: absolute;
     z-index: 1;
