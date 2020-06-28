@@ -1,14 +1,8 @@
 
 @import "./resets";
+@import "./variables";
 @import "./mixins";
 @import "./keyframes";
-
-$first-color: #244F75;
-$second-color:#60BFBF;
-$third-color: #8C4B7E;
-$fourth-color:#F8BB44;
-$fifth-color: #F24B4B;
-$fontsize: 16px;
 
 
 body {
@@ -21,7 +15,7 @@ body {
     display: flex;
     min-height: 100vh;
     text-align: center;
-    overflow: hidden;
+    overflow: hidden; 
     
         
     #{&}__strip:nth-child(1) {
@@ -32,20 +26,18 @@ body {
             animation-name: strips-move1;
             animation-delay: 0.1s;
 
-                &:before {
-                @include strips_effect();
-
-                    &:hover {
-                    transform: skew(0deg) scale(5) translate(0, 0);
-                    opacity: 0.05;
-                    }
-                }
-
                 & .strip__title {
-                    color:white;
-                    z-index: 2;
+                    @include strips_title;
                 } 
-           }                  
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                @include strips_effect_hover;
+            }
     }
     
 
@@ -57,20 +49,18 @@ body {
             animation-name: strips-move2;
             animation-delay: 0.2s;
 
-                &:before {
-                @include strips_effect();
-
-                    &:hover {
-                    transform: skew(0deg) scale(5) translate(0, 0);
-                    opacity: 0.05;
-                    }
-                }
-
                 & .strip__title {
-                    color:white;
-                    z-index: 2;
+                    @include strips_title;
                 } 
-           }   
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                @include strips_effect_hover;
+            }
     }
 
     #{&}__strip:nth-child(3) {
@@ -81,20 +71,18 @@ body {
             animation-name: strips-move3;
             animation-delay: 0.3s;
 
-                &:before {
-                @include strips_effect();
-
-                    &:hover {
-                    transform: skew(0deg) scale(5) translate(0, 0);
-                    opacity: 0.05;
-                    }
-                }
-
                 & .strip__title {
-                    color:white;
-                    z-index: 2;
+                    @include strips_title;
                 } 
-           }
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                @include strips_effect_hover;
+            }
     }
 
     #{&}__strip:nth-child(4) {
@@ -105,20 +93,18 @@ body {
             animation-name: strips-move4;
             animation-delay: 0.4s;
 
-                &:before {
-                @include strips_effect();
-
-                    &:hover {
-                    transform: skew(0deg) scale(5) translate(0, 0);
-                    opacity: 0.05;
-                    }
-                }
-
                 & .strip__title {
-                    color:white;
-                    z-index: 2;
+                    @include strips_title;
                 } 
            }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                @include strips_effect_hover;
+            }
     }
 
     #{&}__strip:nth-child(5) {
@@ -129,19 +115,17 @@ body {
             animation-name: strips-move5;
             animation-delay: 0.5s;
 
-                &:before {
-                @include strips_effect();
-
-                    &:hover{
-                    transform: skew(0deg) scale(5) translate(0, 0);
-                    opacity: 0.05;
-                    }
-                }
-
                 & .strip__title {
-                    color:white;
-                    z-index: 2;
+                    @include strips_title;
                 } 
-           }    
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                @include strips_effect_hover;
+            }
     }
 }
