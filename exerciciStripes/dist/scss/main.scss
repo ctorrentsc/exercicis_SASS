@@ -1,0 +1,153 @@
+
+@import "./resets";
+@import "./mixins";
+@import "./keyframes";
+
+$first-color: #244F75;
+$second-color:#60BFBF;
+$third-color: #8C4B7E;
+$fourth-color:#F8BB44;
+$fifth-color: #F24B4B;
+$fontsize: 16px;
+
+
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: $fontsize;
+}
+
+.strips {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    
+        
+    #{&}__strip:nth-child(1) {
+        width: 20%;        
+
+           & .strip__content {
+            @include strips_look($first-color);
+            animation-name: strips-move1;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+
+                & .strip__title {
+                    color:white;
+                    z-index: 2;
+                } 
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                transform: skew(0deg) scale(5) translate(0, 0);
+                opacity: 0.05;
+            }
+    }
+    
+
+    #{&}__strip:nth-child(2) {
+        width: 20%;
+        
+
+           & .strip__content {
+            @include strips_look($second-color);
+            animation-name: strips-move2;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+
+                & .strip__title {
+                    color:white;
+                    z-index: 2;
+                } 
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                transform: skew(0deg) scale(5) translate(0, 0);
+                opacity: 0.05;
+            }
+    }
+
+    #{&}__strip:nth-child(3) {
+        width: 20%;
+
+           & .strip__content {
+            @include strips_look($third-color);
+            animation-name: strips-move3;
+            animation-duration: 1s;
+            animation-delay: 0.3s;
+
+                & .strip__title {
+                    color:white;
+                    z-index: 2;
+                } 
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                transform: skew(0deg) scale(5) translate(0, 0);
+                opacity: 0.05;
+            }
+    }
+
+    #{&}__strip:nth-child(4) {
+        width: 20%;
+
+           & .strip__content {
+            @include strips_look($fourth-color);
+            animation-name: strips-move4;
+            animation-duration: 1s;
+            animation-delay: 0.4s;
+
+                & .strip__title {
+                    color:white;
+                    z-index: 2;
+                } 
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                transform: skew(0deg) scale(5) translate(0, 0);
+                opacity: 0.05;
+            }
+    }
+
+    #{&}__strip:nth-child(5) {
+        width: 20%;
+
+           & .strip__content {
+            @include strips_look($fifth-color);
+            animation-duration: 1s;
+            animation-name: strips-move5;
+            animation-delay: 0.5s;
+
+                & .strip__title {
+                    color:white;
+                    z-index: 2;
+                } 
+           }      
+
+            & .strip__content:before {
+                @include strips_effect();
+            }
+
+            & .strip__content:hover:before {
+                transform: skew(0deg) scale(5) translate(0, 0);
+                opacity: 0.05;
+            }
+    }
+}

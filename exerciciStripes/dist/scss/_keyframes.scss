@@ -1,0 +1,27 @@
+
+/* The animation code */
+@keyframes strips-move1 {
+from {transform: translateX(-100%);}
+to {transform: translateX(0);}
+}
+
+@keyframes strips-move2 {
+from {transform: translateY(-100%);}
+to {transform: translateY(0);}
+}
+
+@keyframes strips-move3 {
+from {transform: translateY(100%);}
+to {transform: translateY(0);}
+}
+
+@keyframes strips-move4 {
+from {transform: translateY(-100%);}
+to {transform: translateY(0);}
+}
+
+@keyframes strips-move5 {
+from {transform: translateX(100%);}
+to {transform: translateX(0);}
+}
+
